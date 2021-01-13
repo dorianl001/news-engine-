@@ -5,6 +5,7 @@ import SearchBar from './Components/SearchBar'
 import SearchResults from './Components/SearchResults'
 
 function App() {
+  console.log(process.env.REACT_APP_NEWS_WEBSITE_KEY)
   return (
     <div className="App">
       
@@ -14,10 +15,6 @@ function App() {
 
     <div className="AppHeadLines">
       <HeadLines/>
-    </div>
-
-    <div className="AppSearchbar">
-      <SearchBar/>
     </div>
 
     <div className="AppSearchResults">
