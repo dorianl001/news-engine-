@@ -2,8 +2,11 @@ import React from 'react';
 
 function Header(props) {
     return (
-        <div>
-           <h2>News</h2> 
+        <div className="header-container">
+           <h2>Web News</h2> 
+
+
+           
         </div>
     );
 }
