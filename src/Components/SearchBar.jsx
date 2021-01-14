@@ -1,8 +1,23 @@
 import React from 'react';
 
 
-function SearchBar() {
-  
+function SearchBar( {setNews} ) {
+
+    function getNews() {
+        let url = 'http://newsapi.org/v2/everything?' +
+          'q=Apple&' +
+          'from=2021-01-14&' +
+          'sortBy=popularity&' +
+          `apiKey=${process.env.REACT_APP_NEWS_WEBSITE_KEY}`;
+        fetch(url)
+        .then(res => res.json())
+        .then(res => {
+          console.log(res)
+            setNews(res.data)
+        })
+        .catch(console.error) 
+    
+      }
     return (
         <div>
             <h2>SearchBar</h2>
@@ -15,7 +30,7 @@ function SearchBar() {
                     //onChange={handleChange}
                     //value={search}
                     />
-                <button type="submit">Search</button>
+                <button onClick={getNews} type="submit">Search</button>
             </form>
         </div>
     );
