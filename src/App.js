@@ -1,8 +1,8 @@
 import './App.css';
 import React , { useState } from 'react';
-import Header from './Components/Header';
-import HeadLines from './Components/HeadLines';
-import SearchResults from './Components/SearchResults';
+import Header from './components/Header';
+import HeadLines from './components/HeadLines';
+import SearchResults from './components/SearchResults';
 
 
 
