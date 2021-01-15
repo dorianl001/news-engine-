@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 
 function SearchBar( {setNews} ) {
@@ -18,17 +18,19 @@ function SearchBar( {setNews} ) {
         .catch(console.error) 
     
       }
+
+
     return (
         <div>
             <h2>SearchBar</h2>
-            <form className="form-horizontal">
+            <form  className="form-horizontal">
                 <input 
                     placeholder="Search" 
                     type="text" 
                     name="search" 
                     required
-                    //onChange={handleChange}
-                    //value={search}
+                    onChange={handleChange}
+                    value={search}
                     />
                 <button onClick={getNews} type="submit">Search</button>
             </form>

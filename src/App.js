@@ -1,13 +1,23 @@
 import './App.css';
-import React , { useState, useEffect } from 'react';
+import React , { useState } from 'react';
 import Header from './Components/Header';
 import HeadLines from './Components/HeadLines';
 import SearchResults from './Components/SearchResults';
 
 
 
-function App() {
+function App({ handleSubmit, handleChange, search }) {
   const [news, setNews] = useState()
+
+  const [search, setSearch] = useState();
+
+  function handleChange(event) {
+      setSearch(event.target.value);
+  }
+
+  function handleSubmit(event) {
+      event.preventDefault();
+  }
   
   return (
     <div className="App">
@@ -17,11 +27,15 @@ function App() {
     </div>
 
     <div className="AppHeadLines">
-      <HeadLines/>
+      <HeadLines news={news}/>
     </div>
 
     <div className="AppSearchResults">
-      <SearchResults/>
+      <SearchResults
+         handleChange={handleChange}
+         handleSubmit={handleSubmit}
+         search={search}
+      />
     </div>
       
     </div>
