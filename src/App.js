@@ -6,7 +6,7 @@ import SearchResults from './Components/SearchResults';
 
 
 
-function App({ handleSubmit, handleChange, search }) {
+function App() {
   const [news, setNews] = useState()
 
   const [search, setSearch] = useState();
@@ -23,7 +23,12 @@ function App({ handleSubmit, handleChange, search }) {
     <div className="App">
       
     <div className="AppHeader">
-      <Header setNews={setNews}/>
+      <Header 
+      setNews={setNews}
+      handleChange={handleChange}
+      handleSubmit={handleSubmit}
+      search={search}
+      />
     </div>
 
     <div className="AppHeadLines">
@@ -32,8 +37,7 @@ function App({ handleSubmit, handleChange, search }) {
 
     <div className="AppSearchResults">
       <SearchResults
-         handleChange={handleChange}
-         handleSubmit={handleSubmit}
+         
          search={search}
       />
     </div>

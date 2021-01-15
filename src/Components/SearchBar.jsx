@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 
-function SearchBar( {setNews} ) {
+function SearchBar( {setNews, handleChange, handleSubmit, search} ) {
 
     function getNews() {
         let url = 'http://newsapi.org/v2/everything?' +
