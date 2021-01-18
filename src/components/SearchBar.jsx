@@ -12,8 +12,8 @@ function SearchBar( {setNews, handleChange, handleSubmit, search} ) {
         fetch(url)
         .then(res => res.json())
         .then(res => {
-          console.log(res)
-            setNews(res.data)
+          console.log(res.articles)
+            setNews(res.articles)
         })
         .catch(console.error) 
     
@@ -21,9 +21,9 @@ function SearchBar( {setNews, handleChange, handleSubmit, search} ) {
 
 
     return (
-        <div>
+        <div className="SearchBar">
             <h2>SearchBar</h2>
-            <form  className="form-horizontal">
+            <form  onSubmit={handleSubmit} className="form-horizontal">
                 <input 
                     placeholder="Search" 
                     type="text" 

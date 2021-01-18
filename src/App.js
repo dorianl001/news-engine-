@@ -37,8 +37,8 @@ function App() {
 
     <div className="AppSearchResults">
       <SearchResults
-         
-         search={search}
+         news={news}
+        search={search}
       />
     </div>
       

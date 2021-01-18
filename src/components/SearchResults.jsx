@@ -1,11 +1,19 @@
 import React from 'react';
 
-function SearchResults() {
+function SearchResults({news}) {
     return (
-        <div>
-            <h2>Search Results</h2>
-        </div>
+      <div className="searchresults">
+        {news && news.map(function(n) {
+          return (
+            <div>
+              <p>{n.title}</p>
+              <p>{n.author}</p>
+            </div>
+          );
+        })}
+      </div>
     );
-}
-
+  }
+  
 export default SearchResults;
+
