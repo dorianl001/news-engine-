@@ -6,7 +6,7 @@ function SearchResults({news}) {
         {news && news.map(function(n) {
           return (
             <div>
-              <p>{n.title}</p>
+              <p key={news.id}>{n.title}</p>
               <p>{n.author}</p>
             </div>
           );
