@@ -13,3 +13,18 @@
   color: white;
 }
 
+.searchresults div img {
+  width: 300px;
+}
+
+.searchresults div {
+  border: 1px solid black;
+  margin: 20px;
+  width: 800px;
+}
+
+.searchresults {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

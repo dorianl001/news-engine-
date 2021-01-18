@@ -7,15 +7,16 @@ import SearchResults from './components/SearchResults.jsx';
 
 
 function App() {
-  const [news, setNews] = useState()
+  const [news, setNews] = useState('')
 
-  const [search, setSearch] = useState();
+  const [search, setSearch] = useState('');
 
   function handleChange(event) {
       setSearch(event.target.value);
   }
 
   function handleSubmit(event) {
+    console.log(search)
       event.preventDefault();
   }
   
@@ -38,7 +39,7 @@ function App() {
     <div className="AppSearchResults">
       <SearchResults
          news={news}
-        search={search}
+        // search={search}
       />
     </div>
       

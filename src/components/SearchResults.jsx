@@ -5,10 +5,10 @@ function SearchResults({news}) {
       <div className="searchresults">
         {news && news.map(function(n) {
           return (
-            <div>
-              <p key={n.title.id}>{n.title}</p>
-              <p key={n.urlToImage.id}>{n.urlToImage}</p>
-              <p key={n.author.id}>{n.author}</p>
+            <div key={n.title.id}>
+              <h2>{n.title}</h2>
+              <img src={n.urlToImage}></img>
+              <p>{n.author}</p>
             </div>
           );
         })}
