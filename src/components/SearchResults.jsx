@@ -9,6 +9,7 @@ function SearchResults({news}) {
               <h2>{n.title}</h2>
               <img src={n.urlToImage}></img>
               <p>{n.author}</p>
+              <a href={n.url} target="_blank">Read full article here</a>
             </div>
           );
         })}

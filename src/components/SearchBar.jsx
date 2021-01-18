@@ -6,7 +6,7 @@ function SearchBar( {setNews, handleChange, handleSubmit, search} ) {
     function getNews() {
         let url = 'http://newsapi.org/v2/everything?' +
           `q=${search}&` +
-          'from=2021-01-14&' +
+          'from=2021-01-18&' +
           'sortBy=popularity&' +
           `apiKey=${process.env.REACT_APP_NEWS_WEBSITE_KEY}`;
         fetch(url)
