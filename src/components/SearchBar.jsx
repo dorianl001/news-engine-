@@ -21,7 +21,7 @@ function SearchBar( {setNews, handleChange, handleSubmit, search} ) {
 
     return (
         <div className="SearchBar">
-            <h2>SearchBar</h2>
+            
             <form  onSubmit={handleSubmit} className="form-horizontal">
                 <input 
                     placeholder="Search" 

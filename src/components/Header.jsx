@@ -6,7 +6,7 @@ function Header( {setNews, handleChange, handleSubmit, search} ) {
     
     return (
         <div className="header-container">
-           <h1>Web News</h1> 
+           <h1>Web News|Your News</h1> 
            <SearchBar 
            setNews={setNews}
            handleChange={handleChange}

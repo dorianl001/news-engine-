@@ -20,11 +20,93 @@
 .searchresults div {
   border: 1px solid black;
   margin: 20px;
-  width: 800px;
+  width: 900px;
 }
 
 .searchresults {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+/* Set box-sizing for all elements */
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+/* Create color variables */
+:root {
+  --primary: #5f9ae0;
+  --secondary: #8308cff0;
+  --secondary-light: #3581f2e7;
+  --white: #fff;
+}
+
+/* Remove the body margin */
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0 1rem;
+}
+
+/* Style the button and tell it not to grow */
+button {
+  background-color: var(--primary);
+  border: 0;
+  color: var(--white);
+  flex-grow: 0;
+  font-size: 1.2rem;
+  line-height: 1;
+  padding: 0.75rem 1rem;
+  text-transform: uppercase;
+}
+
+/* Add some margin on the left of any buttons
+that follow another button or an input */
+button + button,
+input + button {
+  margin-left: 2px;
+}
+
+form {
+  padding: 1rem 0;
+}
+
+/* Style the input and tell it to grow */
+input {
+  background-color: var(--secondary-light);
+  border: 2px solid var(--secondary);
+  color: var(--white);
+  flex-grow: 1;
+  font-size: 1.2rem;
+  padding: 0.75rem 1rem;
+  width: 100%;
+}
+
+/* Set the color of the placeholder text */
+input::placeholder {
+  color: var(--white);
+}
+
+/* Apply flex to the form */
+.form-horizontal {
+  align-items: center;
+  display: flex;
+}
+
+/* Add a media query to add more space between
+the button and input when the browser is at least
+600px wide */
+@media (min-width: 600px) {
+  button + button,
+  input + button {
+    margin-left: 1rem;
+  }
 }

@@ -16,7 +16,6 @@ function App() {
   }
 
   function handleSubmit(event) {
-    console.log(search)
       event.preventDefault();
   }
   
