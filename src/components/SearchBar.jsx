@@ -12,7 +12,6 @@ function SearchBar( {setNews, handleChange, handleSubmit, search} ) {
         fetch(url)
         .then(res => res.json())
         .then(res => {
-          console.log(res.articles)
             setNews(res.articles)
         })
         .catch(console.error) 

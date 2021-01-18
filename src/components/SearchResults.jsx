@@ -7,6 +7,7 @@ function SearchResults({news}) {
           return (
             <div>
               <p key={n.title.id}>{n.title}</p>
+              <p key={n.urlToImage.id}>{n.urlToImage}</p>
               <p key={n.author.id}>{n.author}</p>
             </div>
           );
@@ -15,5 +16,5 @@ function SearchResults({news}) {
     );
   }
   
-export default SearchResults;
-
+  export default SearchResults;
+  
