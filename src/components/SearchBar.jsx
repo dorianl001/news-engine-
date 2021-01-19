@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 function SearchBar( {setNews, handleChange, handleSubmit, search} ) {
 
     function getNews() {
-        let url = 'http://newsapi.org/v2/everything?' +
+        let url = 'https://newsapi.org/v2/everything?' +
           `q=${search}&` +
           'from=2021-01-18&' +
           'sortBy=popularity&' +
