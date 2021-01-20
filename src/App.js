@@ -9,7 +9,7 @@ import SearchResults from './components/SearchResults.jsx';
 function App() {
   const [news, setNews] = useState([])
 
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState([]);
 
   function handleChange(event) {
       setSearch(event.target.value);

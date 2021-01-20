@@ -6,7 +6,7 @@ function SearchBar( {setNews, handleChange, handleSubmit, search} ) {
     function getNews() {
         let url ='https://api.nytimes.com/svc/search/v2/articlesearch.json?' +
           `q=${search}&` +
-          `api-key=${process.env.REACT_APP_NEWS_WEBSITE_KEY}`;
+          `api-key=${process.env.REACT_APP_WEBSEARCH_KEY}`;
         fetch(url)
         .then(res => res.json())
         .then(res => {
