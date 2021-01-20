@@ -73,7 +73,8 @@ form {
 
 /* Style the input and tell it to grow */
 input {
-  background-color: white;
+  background-color: #ffffff;
+  opacity: 1;
   border: 2px solid black;
   color: black;
   flex-grow: 1;
@@ -84,7 +85,7 @@ input {
 
 /* Set the color of the placeholder text */
 input::placeholder {
-  color: white;
+  color: black;
 }
 
 /* Apply flex to the form */
