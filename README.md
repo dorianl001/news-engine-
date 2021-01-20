@@ -25,7 +25,7 @@ I had trouble with API authorization. ERROR 401 Unauthorized
 
 ## Description
 
-SearchBar.jsx:10 GET https://api.nytimes.com/svc/search/v2/articlesearch.json?q=tacos&api-key=**********\*\***********
+SearchBar.jsx:10 GET https://api.nytimes.com/svc/search/v2/articlesearch.json?q=tacos&api-key=********\*\*\*********
 
 ## Your Error
 
@@ -46,15 +46,15 @@ I tried changing the name of my API Key from my gitignore files, I updated my co
 
 ## 2. MVP Goals
 
--Implement search bar.
--Render search results
+- As a user, I want to use the search bar.
+- As a user, I want the website to render the search results.
 
 ## 3. Stretch Goals
 
--Implement news headlines of the day
--Implement the ability to sort your search criteria
--Implement the ability to provide source links
--Implement beautiful UI
+- As a programmer, I want to implement news headlines of the day.
+- As a programmer, I want to implement the ability to sort your search criteria.
+- As a programmer, I want to implement the ability to provide source links.
+- As a designer, I want to implement beautiful UI.
 
 ## [License](LICENSE)
 
