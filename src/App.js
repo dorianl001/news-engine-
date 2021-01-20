@@ -7,7 +7,7 @@ import SearchResults from './components/SearchResults.jsx';
 
 
 function App() {
-  const [news, setNews] = useState('')
+  const [news, setNews] = useState([])
 
   const [search, setSearch] = useState('');
 

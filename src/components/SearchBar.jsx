@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 function SearchBar( {setNews, handleChange, handleSubmit, search} ) {
 
     function getNews() {
-        let url = 'https://api.nytimes.com/svc/search/v2/articlesearch.json?' +
+        let url ='https://api.nytimes.com/svc/search/v2/articlesearch.json?' +
           `q=${search}&` +
           `api-key=${process.env.REACT_APP_NEWS_WEBSITE_KEY}`;
         fetch(url)
@@ -17,7 +17,6 @@ function SearchBar( {setNews, handleChange, handleSubmit, search} ) {
     
       }
 
-    //   https://api.nytimes.com/svc/search/v2/articlesearch.json?q=election&api-key=yourkey
     return (
         <div className="SearchBar">
             
