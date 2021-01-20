@@ -1,9 +1,6 @@
 import React from 'react';
 
 function SearchResults({news}) {
-  if (news.length <1) {
-    return <h2>Loading</h2>
-  }
 
   return (
     <div className="searchresults">
