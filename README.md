@@ -2,79 +2,59 @@
 
 # Project Description: A short description of your game.
 
-My Simon game will test your memory and reaction time by
-making you repeat the sequence of colored buttons in a
-timely manner. If you touch the wrong button or if you
-take too long to press the right sequence, the game will
-reset. Each round will progressively get faster as the
-sequences become more difficult to remember and repeat.
+# App Description
+
+News engine is a website powered by the NewYork Times API. The user will be able to search articles on various topics and read the full articles.
 
 ## Instructions
 
 1. Fork and clone this repository.
-1. Change into the new directory.
+2. On your terminal, navigate to the file in your directory.
+3. Use the command, `npm start` to open your local host in the browser.
+4. Use the command, `code .` to open your files in the text editor of your choice.(please include the space between code and the period)
 
 ## Technologies used
 
-HTML5 was used to frame the website, CSS to style the website, and JavaScript for
-all the interactive features.
+HTML5 was used to frame the website, CSS to style the website, JavaScript for some interactivity,and the React library for UI. NYTimes API powers the search and Surge for deployment.
 
-Link to the project website: https://dorianl001.github.io/Simon/
+Link to the project website: newswebsearch.surge.sh
 
 # Project Issues
 
-I had trouble randomizing my sequence to challenge the user
+I had trouble with API authorization. ERROR 401 Unauthorized
 
 ## Description
 
-Uncaught ReferenceError: i is not defined
-at HTMLButtonElement.startFunc (demo3.js:58)
-
-## Code Snippet
-
-function startFunc(){
-for (let i = 0; i < 4; i++) {
-setTimeout( () => console.log("squareNumber", initialSeq[i]), i \* 3000)
-}
-console.log(initialSeq[i])
-if(initialSeq[i] == 0){
-setTimeout( () => {red.style.border = "thick solid #0000FF";}, 600)
-setTimeout( () => {red.style.border = "none";}, 2000)
-}else if(initialSeq[i] == 1){
-setTimeout( () => {green.style.border = "thick solid #0000FF";}, 600)
-setTimeout( () => {green.style.border = "none";}, 2000)
-}}
+SearchBar.jsx:10 GET https://api.nytimes.com/svc/search/v2/articlesearch.json?q=tacos&api-key=**********\*\***********
 
 ## Your Error
 
-I was trying to refactor my previous code to make it cleaner when my previous code was working.
+I needed to update my API Key since a different key was being used from a different API.
 
 ## Why you think you're getting this error
 
-I think I got the error from changing my code which made i the iterator have a null value.
+I had forgotten that I needed to update my API Key configuration within my settings or git.
 
 ## Everything you've tried
 
-changing scope, re-arranging the order of the code, researching other methods, and console logging the results for more insight. After some guidance; the for loop logic was changed, added some variables on top of the loop, and made an adjustment to the setTimeOut interval.
+I tried changing the name of my API Key from my gitignore files, I updated my configuration in git and on the Heroku settings, and then I switched to Surge for deployment.
 
 ## 1. Design
 
-![wireframe 1](https://i.imgur.com/su1EHDo.png)
-![wireframe 2](https://i.imgur.com/E9dToM1.png)
+![wireframe 1](https://i.postimg.cc/7hy6cvj2/Screen-Shot-2021-01-20-at-5-28-45-PM.png)
+![wireframe 2](https://i.postimg.cc/ZRbsL05B/Screen-Shot-2021-01-20-at-5-38-59-PM.png)
 
 ## 2. MVP Goals
 
-- As a player, I want the game to start when I click the start button.
-- As a player, I want to know if I chose the wrong button.
-- As a player, I want the game to become increasingly difficult (speed and sequence)
-- As a player, I want to know what round I am in.
-- As a designer, I want the design to look pleasing to the eyes.
+-Implement search bar.
+-Render search results
 
 ## 3. Stretch Goals
 
-- As a player, I would like to see a timer in order to know how much time I have to repeat a given sequence.
-- As a player, I would like to hear metal music for the suspense and thrill aspect of the game.
-- As a player, I would like to be allowed to repeat a sequence once per round.
+-Implement news headlines of the day
+-Implement the ability to sort your search criteria
+-Implement the ability to provide source links
+-Implement beautiful UI
 
 ## [License](LICENSE)
 
