@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# News Engine
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Project Description: A short description of your game.
 
-## Available Scripts
+My Simon game will test your memory and reaction time by
+making you repeat the sequence of colored buttons in a
+timely manner. If you touch the wrong button or if you
+take too long to press the right sequence, the game will
+reset. Each round will progressively get faster as the
+sequences become more difficult to remember and repeat.
 
-In the project directory, you can run:
+## Instructions
 
-### `yarn start`
+1. Fork and clone this repository.
+1. Change into the new directory.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technologies used
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+HTML5 was used to frame the website, CSS to style the website, and JavaScript for
+all the interactive features.
 
-### `yarn test`
+Link to the project website: https://dorianl001.github.io/Simon/
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Project Issues
 
-### `yarn build`
+I had trouble randomizing my sequence to challenge the user
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Description
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Uncaught ReferenceError: i is not defined
+at HTMLButtonElement.startFunc (demo3.js:58)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Code Snippet
 
-### `yarn eject`
+function startFunc(){
+for (let i = 0; i < 4; i++) {
+setTimeout( () => console.log("squareNumber", initialSeq[i]), i \* 3000)
+}
+console.log(initialSeq[i])
+if(initialSeq[i] == 0){
+setTimeout( () => {red.style.border = "thick solid #0000FF";}, 600)
+setTimeout( () => {red.style.border = "none";}, 2000)
+}else if(initialSeq[i] == 1){
+setTimeout( () => {green.style.border = "thick solid #0000FF";}, 600)
+setTimeout( () => {green.style.border = "none";}, 2000)
+}}
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Your Error
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+I was trying to refactor my previous code to make it cleaner when my previous code was working.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Why you think you're getting this error
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+I think I got the error from changing my code which made i the iterator have a null value.
 
-## Learn More
+## Everything you've tried
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+changing scope, re-arranging the order of the code, researching other methods, and console logging the results for more insight. After some guidance; the for loop logic was changed, added some variables on top of the loop, and made an adjustment to the setTimeOut interval.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 1. Design
 
-### Code Splitting
+![wireframe 1](https://i.imgur.com/su1EHDo.png)
+![wireframe 2](https://i.imgur.com/E9dToM1.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 2. MVP Goals
 
-### Analyzing the Bundle Size
+- As a player, I want the game to start when I click the start button.
+- As a player, I want to know if I chose the wrong button.
+- As a player, I want the game to become increasingly difficult (speed and sequence)
+- As a player, I want to know what round I am in.
+- As a designer, I want the design to look pleasing to the eyes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 3. Stretch Goals
 
-### Making a Progressive Web App
+- As a player, I would like to see a timer in order to know how much time I have to repeat a given sequence.
+- As a player, I would like to hear metal music for the suspense and thrill aspect of the game.
+- As a player, I would like to be allowed to repeat a sequence once per round.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## [License](LICENSE)
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
+1.  All software code is licensed under GNU GPLv3. For commercial use or
+    alternative licensing, please contact legal@ga.co.
